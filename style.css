@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Shalimar&display=swap');
+
+/* Just getting var*/
+:root{
+    --neon-text-color: #f40;
+    --neon-border-color: #08f;
+    --neon-pText-color : #e1f7de;
+    --neon-pBorder-color: #a59fbec9;
+    --smallTex-color: #f96bbc;
+}
+
+h2, h4:focus {
+    outline: none;
+  }
+  
+  /* Animate neon flicker */
+
+  @keyframes flicker2 {
+      
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      
+        text-shadow:
+            1px 1px 2px black, 0 0 25px rgb(249, 249, 255), 0 0 5px var(--neon-pText-color),
+            0.2rem 0.2rem 1rem #fff,
+            0 0 2rem var(--neon-text-color),
+            0 0 4rem var(--neon-pText-color),
+            0 0 6rem var(--neon-text-color),
+            0 0 8rem var(--neon-pText-color),
+            0 0 10rem var(--neon-text-color);      
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+}
+
+  @keyframes text-annim{
+      0%, 10%, 15%, 30%, 43%, 78%, 100% {
+
+      }
+    0% {text-shadow: 1px 1px 2px var(--neon-pBorder-color);}
+    100%{text-shadow: 1px 1px 200px var(--neon-pBorder-color);}
+}
+
+
+  @keyframes annim{
+    0% {  color: var(--smallTex-color); font-size: 36px; text-decoration-color: var(--neon-ptext-color); text-shadow: 1px 1px 2px var(--neon-pBorder-color);}
+    25% {color: var(--smallTex-color); font-size: 37px; text-decoration-color: var(--neon-ptext-color); text-shadow: 2px 2px 2px var(--neon-pText-color);}
+    50% {color: var(--smallTex-color); font-size: 35px; text-decoration-color: var(--neon-ptext-color); text-shadow: 3px 3px 2px var(--neon-pBorder-color);}
+    75%{color: var(--smallTex-color); font-size: 38px; text-decoration-color: var(--neon-ptext-color); text-shadow: 2.4px 2px 2px var(--neon-pText-color);}
+    100%{color: var(--smallTex-color); font-size: 37px; text-decoration-color: var(--neon-ptext-color); text-shadow: 3px 3px 2px var(--neon-pBorder-color);}
+  }
+
+  @keyframes flicker {
+      
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        
+          text-shadow:
+              -0.2rem -0.2rem 1rem #fff,
+              0.2rem 0.2rem 1rem #fff,
+              0 0 2rem var(--neon-text-color),
+              0 0 4rem var(--neon-text-color),
+              0 0 6rem var(--neon-text-color),
+              0 0 8rem var(--neon-text-color),
+              0 0 10rem var(--neon-text-color);
+          
+          box-shadow:
+              0 0 .5rem #fff,
+              inset 0 0 .5rem #fff,
+              0 0 2rem var(--neon-border-color),
+              inset 0 0 2rem var(--neon-border-color),
+              0 0 4rem var(--neon-border-color),
+              inset 0 0 4rem var(--neon-border-color);        
+      }
+      
+      20%, 24%, 55% {        
+          text-shadow: none;
+          box-shadow: none;
+      }    
+  }
+
+body{
+    font-family: 'Shalimar', cursive;
+    background: #000;
+}
+ h2{
+    font-style: italic;
+    color: #ffffff;
+    border: 0.4rem solid #fff;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    animation: flicker 1.5s infinite alternate;   
+ }
+
+.container{
+    letter-spacing: 3.4px;
+    background-color: rgb(0, 0, 0);
+    width: 856px;
+    height: 510px;
+    margin-left: 182px;
+    padding-left: 0px;
+    margin-top: 149px;
+}
+
+.review{
+    padding-top: 79px;
+    padding-left: 0px;
+    padding-right: -4px;
+    margin-left: 211px;
+}
+
+.title{
+    height: 36px;
+    width: 180px;
+    font-size: 27px;
+    line-height: 0.9;
+    letter-spacing: 3.15px;
+    font-weight: 600;
+    font-style: normal;
+    margin-right: -3px;
+    margin-left: 263px;
+}
+
+.img-container {
+    width: 473px;
+    height: 359px;
+   }
+   
+   #textReview {
+    height: 93.9px;
+    width: 330px;
+    padding-left: 24px;
+    margin-right: 0px;
+    padding-right: 0px;
+    border-top-width: 0.4rem;
+    font-size: 47px;
+    line-height: 84px;
+    letter-spacing: 4.3px;
+    font-style: normal;
+    text-transform: uppercase;
+    background-color: black;
+   }
+   
+
+   #personImg {
+    border-left-width: 46px;
+    border-left-style: solid;
+    border-right-width: 46px;
+    border-right-style: solid;
+    border-top-width: 49px;
+    border-top-style: solid;
+    border-bottom-width: 49px;
+    border-bottom-style: solid;
+    border-radius: 30%;
+    border-left-width: 17px;
+    border-top-width: 17px;
+    border-right-width: 20px;
+    border-bottom-width: 17px;
+    width: 223px;
+    height: 178px;
+    margin-top: 39px;
+    margin-right: 6px;
+    margin-left: -172px;
+    border-color:  transparent;
+   }
+   
+   #Author{
+    color: var(--neon-pText-color);
+    font-size: 36px;
+    padding-left: 0px;
+    margin-left: -156px;
+    margin-bottom: 49.88px;
+    margin-top: -85.12px;
+    animation: annim 3.5s infinite alternate;   
+    font-weight: 700;
+   }
+
+   #job{    
+   border-radius: 12px;
+    color: var(--smallTex-color);
+    font-size: 36px;
+    width: 122px;
+    padding-left: 15px;
+    margin-top: 40px;
+    margin-right: 13px;
+    margin-left: -161px;
+    animation: annim 19s infinite alternate;
+    font-weight: 500;
+   }
+
+   #info{
+    font-size: 51px;
+    margin-left: -161px;
+    height: 161px;
+    width: 609px;
+    margin-bottom: -29px;
+    margin-top: 2px;
+    color: white;
+    animation: flicker2 4.5s infinite alternate;   
+    border-radius: 110px;
+    margin-left: 83px;
+    height: 329px;
+    width: 606px;
+    margin-bottom: 16px;
+    margin-top: -398px;
+    line-height: 1.9;
+    letter-spacing: 1.82px;
+    font-weight: 900;
+    font-style: normal;
+    padding-left: 72px;
+       overflow: auto;
+   }
+
+   .btn-container {
+    margin-left: 153px;
+    margin-top: 0px;
+    padding-top: 81px;
+   }
+
+   .fas{
+    animation: flicker2 4.5s infinite alternate;   
+    font-weight: 300;
+   }
+
+   .random-btn{
+    padding-left: 5px;
+    margin-left: 127px;
+    
+   }
+
+
+   
